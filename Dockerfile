@@ -1,4 +1,4 @@
-FROM node:12-alpine
+FROM node:18-alpine
 
 RUN apk add --update bash
 
@@ -13,7 +13,7 @@ RUN npm install
 COPY . .
 
 # Give permission to run script
-RUN chmod +x ./wait-for-it.sh
+# RUN chmod +x ./wait-for-it.sh
 
 # Build files
 RUN npm run build
